@@ -10,7 +10,7 @@ class SearchComponent extends Component {
     }
   }
 
-  handleSearch = searchText => {
+  handleSearch(searchText) {
     if (!searchText) {
       this.setState({isEmptySearch: true});
     } else {
@@ -21,7 +21,7 @@ class SearchComponent extends Component {
     }
   };
 
-  renderSearchResults = () => {
+  renderSearchResults() {
     let errorMessage = <div style={{'color': 'red'}}>Please make a non-empty search.</div>;
     return this.state.isEmptySearch
       ? errorMessage
