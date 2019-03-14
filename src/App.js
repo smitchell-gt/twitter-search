@@ -1,24 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import SearchField from 'react-search-field';
 import './App.css';
 
 class App extends Component {
+  handleSearch = searchText => {
+    console.log('making a search:', searchText);
+  };
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <SearchField
+            placeholder="Search here..."
+            onEnter={this.handleSearch}
+            onSearchClick={this.handleSearch}
+          />
         </header>
       </div>
     );
