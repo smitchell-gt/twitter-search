@@ -11,7 +11,6 @@ class SearchComponent extends Component {
   }
 
   handleSearch = searchText => {
-    console.log('making a search:', searchText);
     if (!searchText) {
       this.setState({isEmptySearch: true});
     } else {
